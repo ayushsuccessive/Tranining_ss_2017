@@ -1,0 +1,17 @@
+a:link {
+	color: lightblue;
+}
+a:visited {
+	color: red;
+}
+a:active {
+	background-color: yellow;
+}
+a:hover {
+	color: green;
+	font-style: italic;
+	letter-spacing: 3px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}

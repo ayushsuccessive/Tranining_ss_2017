@@ -1,0 +1,38 @@
+.section1 h1 {
+	font-family: arial, verdana, sans-serif;
+}
+.section1 h2 {
+	font-family: "Times NEW ROMAN", serif;
+}
+
+.section2 h1 {
+	font-variant: small-caps;
+}
+.section2 h2 {
+	font-variant: normal;
+}
+
+.section3 td {
+	font-family: arial, verdana, sans-serif;
+	font-weight: bold;
+}
+.section3 p {
+	font-family: "Times NEW ROMAN", serif;
+}
+
+.section4 h1 {	
+	font-size: 30px;
+}
+.section4 h2 {	
+	font-size: 1cm;
+}
+.section4 h3 {	
+	font-size: 120%;
+}
+.section4 p {	
+	font-size: 1em;
+}
+
+.section5 p {
+	font: italic bold 30px arial, sans-serif;
+}

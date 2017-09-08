@@ -1,0 +1,34 @@
+.section1 p {
+	text-indent: 50px;
+}
+
+.section2 th {
+	text-align: right;
+}
+.section2 td {
+	text-align: center;
+}
+.section2 p {
+	text-align: justify;
+}
+
+.section3 h2 {
+	text-decoration: underline;
+}
+.section3 h3 {
+	text-decoration: overline;
+}
+.section3 h4 {
+	text-decoration: line-through;
+}
+
+.section4 h1 {
+	letter-spacing: 6px;
+}
+
+.section5 h1 {
+	text-transform: uppercase;
+}
+.section5 li {
+	text-transform: capitalize;
+}

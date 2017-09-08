@@ -1,0 +1,58 @@
+.image1 {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+.image2 {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+
+.image3 {
+	position: relative;
+	bottom: 10px;
+	left: 200px;
+}
+
+.image4 {
+	position: relative;
+	bottom : 225px;
+	left : 800px;
+}
+
+.card1 {
+	position: absolute;
+	left: 50px;
+	top: 200px;
+	z-index: 1;
+}
+
+.card2 {
+	position: absolute;
+	left: 65px;
+	top: 220px;
+	z-index: 2;
+}
+
+.card3 {
+	position: absolute;
+	left: 80px;
+	top: 240px;
+	z-index: 3;
+}
+
+.card4 {
+	position: absolute;
+	left: 95px;
+	top: 260px;
+	z-index: 4;
+}
+
+.card5 {
+	position: absolute;
+	left: 110px;
+	top: 280px;
+	z-index: 5;
+}

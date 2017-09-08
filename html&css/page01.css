@@ -1,0 +1,35 @@
+h1 {
+	color : #990000;
+	background-color: #FC9804;
+	}
+.section2 {
+		background-color: #FFCC66;
+	}
+.section3 {
+		background-color: #FFCC66;
+		background-image: url("http://html.net/tutorials/css/butterfly.gif");
+		background-size: contain;
+	}
+.section4 {
+		background-color: #FFCC66;
+		background-image: url("http://html.net/tutorials/css/butterfly.gif");
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+#move{
+		height: 100px;
+		overflow: scroll;
+	}
+.section5 {
+		background-color: #FFCC66;
+		background-image: url("http://html.net/tutorials/css/butterfly.gif");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: 50% 80%;
+		background-size: 8%;
+	}
+.section6 {
+	background: #FFCC66 url("http://html.net/tutorials/css/butterfly.gif") no-repeat fixed right bottom;
+	background-size: 8%;
+}
+

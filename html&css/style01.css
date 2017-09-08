@@ -1,0 +1,43 @@
+table, th, td{
+	border: medium solid #ddd;
+	font-family: Arial sans-serif;
+	border-collapse: collapse;
+	padding: 10px;
+	text-align: center;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}
+
+th,td{
+	width: 16.66%;
+}
+
+th {
+	background-color: lightgrey;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	height: 50px;
+}
+
+#count {
+	 background-color: lightgrey;
+}
+
+.display {
+	width: 100%;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: darkgrey;
+}
+
+.photo {
+	width: 100px;
+	height: 100px;
+}
+
