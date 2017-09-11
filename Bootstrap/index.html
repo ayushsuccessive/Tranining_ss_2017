@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee record</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="include/bootstrap-datetimepicker.css">
+  	<link rel="stylesheet" href="include/bootstrap-datetimepicker.min.css">
+  	<script src="include/bootstrap-datetimepicker.js"></script>
+  	<script src="include/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="#">Successive Softwares</a>
+    		</div>
+   			<ul class="nav navbar-nav">
+      			<li class="active"><a href="#">Form</a></li>
+    		</ul>
+  		</div>
+	</nav>
+	<div class="container">
+		<div class="col-md-6 col-sm-12 col-xs-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Personal Information</div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="firstname">First Name</label>
+							<input type="firstname" class="form-control" id="fname" placeholder="Enter First Name">
+						</div>
+						<div class="form-group">
+							<label for="lastname">Last Name</label>
+							<input type="lastsname" class="form-control" id="lname" placeholder="Enter Last Name">
+						</div>
+						<div class="form-group">
+							<label for="gender">Gender</label>
+							<div>
+								<div class="radio radio-inline">
+									<label><input type="radio" name="gender">Male</label>
+								</div>
+								<div class="radio radio-inline">
+									<label><input type="radio" name="gender">Female</label>
+								</div>
+								<div class="radio radio-inline">
+									<label><input type="radio" name="gender">Others</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="religion">Religion</label>
+							<select class="form-control" id="religion">
+								<option disabled selected value>Select Religion</option>
+								<option>Hinduism</option>
+								<option>Muslim</option>
+								<option>Sikhism</option>
+								<option>Christianity</option>
+								<option>Others</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Date of Birth</label>
+				        	<div class="input-group date" id="datetimepicker1" data-date-format="yyyy/mm/dd" placeholder="Enter DOB">
+           						<input type='text' class="form-control" id="dob"/>
+            					<span class="input-group-addon">
+    								<span class="glyphicon glyphicon-calendar"></span>
+           						</span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-12 col-xs-12">	
+			<div class="panel panel-default">
+				<div class="panel-heading">Employee Details</div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="employeeid">Employee ID</label>
+							<input type="employeeid" class="form-control" id="empid"  placeholder="Enter Employee id">
+						</div>
+						<div class="form-group">
+							<label for="email">Email ID</label>
+							<input type="email" class="form-control" id="emial" placeholder="Enter Email id">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+    	$(function () {
+    		var now = new Date();
+   			 $('#datetimepicker1').datetimepicker({
+                format: 'yyyy/mm/dd',
+                startView: 'decade',
+                minView: 'month',
+                autoclose: true,
+                startDate : new Date('1981-01-01'),
+                endDate: now
+            });
+    	});
+    </script>
+
+</body>
+</html>
