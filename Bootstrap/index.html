@@ -19,7 +19,7 @@
       			<a class="navbar-brand" href="#">Successive Softwares</a>
     		</div>
    			<ul class="nav navbar-nav">
-      			<li class="active"><a href="#">Form</a></li>
+      			<li class="active"><a href="#">Employee Registration Form</a></li>
     		</ul>
   		</div>
 	</nav>
@@ -40,14 +40,10 @@
 						<div class="form-group">
 							<label for="gender">Gender</label>
 							<div>
-								<div class="radio radio-inline">
-									<label><input type="radio" name="gender">Male</label>
-								</div>
-								<div class="radio radio-inline">
-									<label><input type="radio" name="gender">Female</label>
-								</div>
-								<div class="radio radio-inline">
-									<label><input type="radio" name="gender">Others</label>
+								<div class="radio">
+									<label class="radio-inline"><input type="radio" name="gender">Male</label>
+									<label class="radio-inline"><input type="radio" name="gender">Female</label>
+									<label class="radio-inline"><input type="radio" name="gender">Others</label>
 								</div>
 							</div>
 						</div>
@@ -71,6 +67,10 @@
            						</span>
 							</div>
 						</div>
+						<div class="form-group">
+							<label for="address">Address</label>
+							<textarea type="address" class="form-control" id="address" rows="3" placeholder="Enter address"></textarea>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -86,11 +86,47 @@
 						</div>
 						<div class="form-group">
 							<label for="email">Email ID</label>
-							<input type="email" class="form-control" id="emial" placeholder="Enter Email id">
+							<input type="email" class="form-control" id="email" placeholder="Enter Email id">
+						</div>
+						<div class="form-group">
+							<label for="phoneno">Phone Number</label>
+							<input type="phoneno" class="form-control" id="phoneno" placeholder="Enter Phone number">
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" value="">Has Passport</label>
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" value="">Has Driving Licence</label>
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" value="">Has Aadhar card</label>
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" value="">Has International Driving Permit</label>
+						</div>
+						<div class="form-group">
+							<label for="reportingmanager">Reporting Manager</label>
+							<input type="reportingmanager" class="form-control" id="manager" placeholder="Enter Reporting Manager Name">
+						</div>
+						<div class="form-group">
+							<label for="designation">Designation</label>
+							<select class="form-control" id="designation">
+								<option disabled selected value>Select Designation</option>
+								<option>Software Developer Trainee</option>
+								<option>Associate Software Developer</option>
+								<option>Software Developer</option>
+								<option>Software Tester Trainee</option>
+								<option>Associate Software Tester</option>
+								<option>Software Tester</option>
+							</select>
 						</div>
 					</form>
 				</div>
 			</div>
+		</div>
+		<div class="text-right">
+			<button type="button" class="btn btn-primary btn-lg">Submit</button>
+			<button type="button" class="btn btn-danger btn-lg">Cancel</button>
 		</div>
 	</div>
 	<script>
@@ -104,6 +140,8 @@
                 startDate : new Date('1981-01-01'),
                 endDate: now
             });
+
+
     	});
     </script>
 
