@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVC_BasicTutorial.Models.Employee>
+
+@{
+    ViewBag.Title = "DetailView";
+    WebGrid grid = new WebGrid(source: Model, rowsPerPage: 5);
+}
+
+<style>
+    .webgrid tr th{
+        text-align: center;
+        padding: 15px;
+        background-color: antiquewhite;
+    }
+    .webgrid-row-style td, .webgrid-alternating-row td{
+        color: cornflowerblue;
+        padding: 10px;
+    }
+
+</style>
+
+<h2>DetailView</h2>
+
+<div id="gridContent" style=" padding:20px; ">
+    @grid.GetHtml(
+     tableStyle: "webgrid table-bordered text-center table-responsive table-hover",
+     headerStyle: "webgrid-header text-center",
+     footerStyle: "webgrid-footer",
+     alternatingRowStyle: "webgrid-alternating-row",
+     selectedRowStyle: "webgrid-selected-row",
+     rowStyle: "webgrid-row-style",
+     mode: WebGridPagerModes.All,
+        columns: new[]
+{
+    grid.Column("EmpId"),
+    grid.Column("FirstName","Full Name",x=> x.FirstName + " "+ x.LastName),
+    grid.Column("Gender"),
+    grid.Column("EmailId"),
+    grid.Column("PhoneNo"),
+    grid.Column("Address"),
+    grid.Column("Designation"),
+    grid.Column("ReportingManager"),
+    grid.Column("", "Actions", x => Html.Raw(Html.ActionLink("Edit","EditView", new { x.EmpId}) + " " + Html.ActionLink("Delete","DeleteData", new { x.EmpId}, new { onclick = "return confirm('Are you sure you wish to delete this Employee Data?');" })))
+})
+</div>
+

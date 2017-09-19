@@ -1,0 +1,74 @@
+﻿@model MVC_BasicTutorial.Models.Employee
+
+@{
+    ViewBag.Title = "EditView";
+}
+
+<h2>EditView</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("EditView", "Employee", FormMethod.Post))
+        {
+
+            <div class="form-group">
+                @Html.HiddenFor(x => x.EmpId)
+                @Html.Label("First Name")
+                @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.FirstName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Last Name")
+                @Html.TextBoxFor(y => y.LastName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.LastName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Gender")
+                <div class="radio-inline">
+                    @Html.RadioButtonFor(x => x.Gender, "Male")Male
+                </div>
+                <div class="radio-inline">
+                    @Html.RadioButtonFor(x => x.Gender, "Female")Female
+                </div>
+                @Html.ValidationMessageFor(y => y.Gender, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Email")
+                @Html.TextBoxFor(y => y.EmailId, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.EmailId, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Phone Number")
+                @Html.TextBoxFor(x => x.PhoneNo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PhoneNo, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Address")
+                @Html.TextAreaFor(y => y.Address, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.Address, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Designation")
+                @Html.DropDownListFor(x => x.Designation, new List<SelectListItem>
+                {
+                    new SelectListItem() {Text = "Software Developer", Value="Software Developer"},
+                    new SelectListItem() {Text = "Software Tester", Value="Software Tester"},
+                    new SelectListItem() {Text = "Bussiness Analyst", Value="Bussiness Analyst"}
+                }, "--Select--")
+                @Html.ValidationMessageFor(y => y.Designation, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Reporting Manager")
+                @Html.TextBoxFor(y => y.ReportingManager, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.ReportingManager, "", new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.ValidationSummary(true)
+                @Html.ValidationMessageFor(x => x.EmpId, "", new { @class = "text-danger" })
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        }
+    </div>
+</div>
+

@@ -129,6 +129,13 @@
 			<button type="button" class="btn btn-danger btn-lg">Cancel</button>
 		</div>
 	</div>
+	<table id="mytable" width=100%>
+				<tr style="background-color: Grey">
+					<th>Name</th>
+					<th>Push/Pull</th>
+					<th>Actions</th>
+				</tr>
+	</table>
 	<script>
     	$(function () {
     		var now = new Date();
@@ -141,7 +148,9 @@
                 endDate: now
             });
 
-
+   			$('.form-control').focusout(function(){
+   				$(this).id
+   			});
     	});
     </script>
 

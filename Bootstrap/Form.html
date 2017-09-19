@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Personal Information</div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="firstname">First Name</label>
+							<input type="firstname" class="form-control" id="fname" placeholder="Enter First Name">
+							<span class="text-danger" id="fnamealert"></span>
+						</div>
+						<div class="form-group">
+							<label for="lastname">Last Name</label>
+							<input type="lastsname" class="form-control" id="lname" placeholder="Enter Last Name">
+							<span class="text-danger" id="lnamealert"></span>
+						</div>
+						<div class="form-group">
+							<label for="email">Email ID</label>
+							<input type="email" class="form-control" id="email" placeholder="Enter Email id">
+							<span class="text-danger" id="emailalert"></span>
+						</div>
+						<div class="form-group">
+							<label for="username">User Name</label>
+							<input type="username" class="form-control" id="username" placeholder="Enter username">
+							<span class="text-danger" id="usernamealert"></span>
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="Password" class="form-control" id="password" placeholder="Enter Password">
+							<span class="text-danger" id="pwdalert"></span>
+						</div>
+						<div class="form-group">
+							<label for="Confirm password">Confirm Password</label>
+							<input type="Password" class="form-control" id="Confirmpassword" placeholder="Enter First Name">
+							<span class="text-danger" id="confirmpwdalert"></span>
+						</div>
+						<div class="form-group">
+							<label for="DOB">Date of Birth</label>
+							<select class="form-control" id="year">
+								<option disabled selected value>Select year</option>
+								<option>1990</option><option>1991</option><option>1992</option>
+								<option>1993</option><option>1994</option><option>1995</option>
+								<option>1996</option><option>1997</option><option>1998</option>
+								<option>1999</option><option>2000</option><option>2001</option>
+								<option>2002</option><option>2003</option><option>2004</option>
+								<option>2005</option><option>2006</option><option>2007</option>
+								<option>2008</option><option>2009</option><option>2010</option>
+							</select>
+							<select class="form-control" id="month">
+								<option disabled selected value>Select Month</option>
+								<option>January</option><option>Feburary</option><option>March</option>
+								<option>april</option><option>May</option><option>June</option>
+								<option>July</option><option>August</option><option>September</option>
+								<option>October</option><option>November</option><option>December</option>
+							</select>
+							<select class="form-control" id="date">
+								<option disabled selected value>Select date</option>
+								<option>1</option><option>2</option><option>3</option>
+								<option>4</option><option>5</option><option>6</option>
+								<option>7</option><option>8</option><option>9</option>
+								<option>10</option><option>11</option><option>12</option>
+								<option>13</option><option>14</option><option>15</option>
+								<option>16</option><option>17</option><option>18</option>
+								<option>19</option><option>20</option><option>21</option>
+								<option>22</option><option>23</option><option>24</option>
+								<option>25</option><option>26</option><option>27</option>
+								<option>28</option><option>29</option><option>30</option><option>31</option>
+							</select>
+							<span class="text-danger" id="dobalert"></span>
+						</div>
+						<div class="form-group">
+							<label for="gender">Gender</label>
+							<div>
+								<div class="radio">
+									<label class="radio-inline"><input type="radio" name="gender" value="Male">Male</label>
+									<label class="radio-inline"><input type="radio" name="gender" value="Female">Female</label>
+									<label class="radio-inline"><input type="radio" name="gender" value="others" >Others</label>
+								</div>
+								<span class="text-danger" id="genderalert"></span>
+							</div>
+						</div>
+						<div>
+							<label for="Hobbies">Hobbies</label>
+						</div>
+						<div class="checkbox form-group">
+							<label><input type="checkbox" value="Cricket">Cricket</label>
+							<label><input type="checkbox" value="Football">Football</label>
+							<label><input type="checkbox" value="Chess">Chess</label>
+							<label><input type="checkbox" value="Reading">Reading</label>
+							<label><input type="checkbox" value="Singing">Singing</label>
+							<label><input type="checkbox" value="Dancing">Dancing</label>
+							<label><input type="checkbox" value="Others" id="otherhobbies">Others</label>
+							<input type="text" class="form-control" id="Hobbies" placeholder="Enter Hobbies">
+							<span class="text-danger" id="hobbiesalert"></span>
+						</div>
+						<div class="form-group">
+							<label for="address">Address</label>
+							<textarea type="address" class="form-control" id="address" rows="3" placeholder="Enter address"></textarea>
+							<span class="text-danger" id="addressalert"></span>
+						</div>
+						<div class="text-right">
+							<button type="button" class="btn btn-primary btn-lg" id="Submit">Submit</button>
+							<button type="button" class="btn btn-danger btn-lg">Cancel</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<table id="mytable" width=100%>
+		<tr style="background-color: Grey">
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email Id</th>
+			<th>User Name</th>
+			<th>DOB</th>
+			<th>Gender</th>
+			<th>Hobbies</th>
+		</tr>
+	</table>
+
+
+		<script>
+			$(function() {
+				var a = [];
+				$("#Hobbies").prop('disabled',true);
+				$(".form-control").focusout(function() {
+					$(this).parent().find('.text-danger').empty();
+					var response;
+					if(this.id == 'fname')
+					{
+						response = validname($(this).val());
+						if(response) {
+							$("#fnamealert").text("invalid Name");
+						}
+					} else if(this.id == 'lname')
+					{
+						response = validname($(this).val());
+						if(response) {
+							$("#lnamealert").text("invalid Name");
+						}
+					} else if(this.id == 'email')
+					{
+						response = validemail($(this).val());
+						if(!response) {
+							$("#emailalert").text("invalid Email");
+						}
+					} else if(this.id == 'username')
+					{
+						response = validname($(this).val());
+						if(response) {
+							$("#usernamealert").text("invalid Name");
+						}
+					} else if(this.id == 'password')
+					{
+						response = validpassword($(this).val());
+						if(response) {
+							$("#pwdalert").text("invalid password password length min: 10 and max: 20 characters");
+						}
+					} else if(this.id == 'Confirmpassword')
+					{
+						response = validconfirmpassword($(this).val(),$("#password").val());
+						if(response) {
+							$("#confirmpwdalert").text("invalid password enter same password as above");
+						}
+					} else if(this.id == 'address')
+					{
+						response = validaddress($(this).val());
+						if(response) {
+							$("#addressalert").text("invalid Address");
+						}
+					} 
+
+				});
+
+				$("#Submit").click(function() {
+					if($("#year").val() == null || $("#month").val() == null || $("#date").val() == null) {
+						$("#dobalert").text("Select Date of Birth");
+					}
+
+
+					var newuser = $("#username").val();
+					validuser = 1;
+					for(i=0;i<a.length;i++) {
+						if(a[i] == newuser) {
+							validuser = 0;
+							break;
+						}
+					}
+					if(validuser) {
+						var hobbies = $(".checkbox").prop('checked',true).val();
+						var str = "<tr><td>"+$('#fname').val()+"</td><td>"+$('#lname').val()+"</td><td>"+$('#email').val()+"</td><td>"+$('#username').val()+"</td><td>"+$("#year").val()+"/"+$("#month").val()+"/"+$("#date").val()+"</td><td>Male</td><td>"+hobbies+"</td></tr>";	
+						$("#mytable").append(str);
+						a.push(newuser);	
+					}
+					else
+					{
+						alert("User already exist");
+					}
+								
+				});
+			});
+
+					
+			function validemail(input) {
+				var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    			return re.test(input);
+			}
+
+			function validname(input) {
+				if( input.length > 25)
+					return 1;
+				else 
+					return 0;
+			}
+
+			function validaddress(input) {
+				if( input.length > 100)
+					return 1;
+				else 
+					return 0;
+			}
+
+			function validpassword(input) {
+				if( input.length < 10 || input.length > 20)
+					return 1;
+				else 
+					return 0;
+			}
+ 			
+ 			function validconfirmpassword(input1,input2) {
+				if( input1 != input2)
+					return 1;
+				else 
+					return 0;
+			}
+		</script>
+</body>
+</html>
